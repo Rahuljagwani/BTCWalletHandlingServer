@@ -55,7 +55,7 @@ app.post("/api/importwallet", async (req, res) => {
     }
     if (response.status !== 200) {
         res.status(500).json({ error: response.error });
-    } else {
+    } else { 
         res.send(response);
     }
 });
@@ -64,6 +64,10 @@ app.post("/api/sync", async (req, res) => {
     const walletAddress = req.body.address;
     const response = await wallet.getTransactions(walletAddress);
     res.send(response);
+});
+
+app.get("/", (req, res) => {
+    res.json({message: "Hello"});
 });
 
 
