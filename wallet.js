@@ -4,10 +4,8 @@ const ecc = require('tiny-secp256k1')
 const { BIP32Factory } = require('bip32')
 const bip32 = BIP32Factory(ecc)
 const axios = require('axios');
-const dotenv = require('dotenv');
-dotenv.config();
-const apiUrl = process.env.API_URL;
-const apiToken = process.env.TOKEN;
+const apiUrl = "https://api.blockcypher.com/v1/btc/test3";
+const apiToken = "debe9e904b65463fa6a77a828409e0de";
 var resp;
 
 async function createWallet(walletName, mnemonic = bip39.generateMnemonic()) {
