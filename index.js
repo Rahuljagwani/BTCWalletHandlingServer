@@ -35,7 +35,6 @@ app.post("/api/importwallet", async (req, res) => {
         balance = await wallet.getTransactions(addr);
 
         if (balance.status === 200) {
-            console.log(0);
             response = {
                 status: balance.status,
                 balance: balance.balance,
@@ -52,7 +51,6 @@ app.post("/api/importwallet", async (req, res) => {
         }
 
     } else {
-        console.log(1);
         response = walletData;
     }
     if (response.status !== 200) {
