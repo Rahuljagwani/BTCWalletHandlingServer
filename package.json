@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@bitcoinerlab/secp256k1": "^1.0.5",
     "axios": "^1.5.1",
     "bip32": "^4.0.0",
     "bip39": "^3.1.0",
